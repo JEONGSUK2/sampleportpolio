@@ -39,7 +39,7 @@ const url = new URL(location.href).searchParams;
 const lang = url.get("Lang")
 
 
-axios.get("../data/data.json").then(function(res){ 
+axios.get("data/data.json").then(function(res){ 
     if($lang == "en"){  
         res.data.EnNav.map((e,i)=>{
             document.querySelectorAll(".list li a")[i].textContent = e.title
